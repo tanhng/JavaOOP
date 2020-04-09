@@ -1,0 +1,35 @@
+package hust.soict.ictglobal.lab02;
+import java.util.Scanner;
+import java.util.Arrays;
+public class MatrixAddition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("enter width");
+		int n=keyboard.nextInt();
+		System.out.println("enter length");
+		int m=keyboard.nextInt();
+		int array1[][]=new int[n][m];  
+		int array2[][]=new int[n][m];  
+		int result[][]=new int[n][m];
+		int i,j;
+		for(i=0;i<n;i++) {
+			for(j=0;j<m;j++) {
+				System.out.println("enter array1["+i+"]["+j+"]");
+				array1[i][j]=keyboard.nextInt();
+				System.out.println("enter array2["+i+"]["+j+"]");
+				array2[i][j]=keyboard.nextInt();
+				result[i][j]=array1[i][j]+array2[i][j];
+			}
+			System.out.println();
+		}
+   
+		for(i=0;i<n;i++){    
+		for(j=0;j<m;j++){        //use - for subtraction  
+		System.out.print(result[i][j]+" ");    
+		}    
+		System.out.println();//new line  
+	}
+	}
+}
